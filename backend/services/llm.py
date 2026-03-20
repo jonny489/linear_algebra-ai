@@ -12,9 +12,8 @@ def generate_response(prompt: str, document_chunks: list[str]):
         "Here is the reference material:" + "\n\n".join(document_chunks) + 
         "\n\n Here is the prompt:" + prompt
     )
-    print(response)
-    return response
+    return response.text
 
 # runs if you run this file directly, just for testing purposes
 if __name__ == "__main__":
-    generate_response("What is the integral of x^2?", [])
+    print(generate_response("What is the integral of x^2?", []))
